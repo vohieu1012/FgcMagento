@@ -1,0 +1,32 @@
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ */
+?>
+<?php
+if ($block->getMode() === 'grid') {
+    $viewMode = 'grid';
+} else {
+    $viewMode = 'list';
+}
+
+?>
+<div id="custom" class="products wrapper <?= /* @noEscape */ $viewMode ?> products-<?= /* @noEscape */ $viewMode ?>" data-bind="scope:'mycomponent'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "#custom": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "mycomponent": {
+                        "component": "Fgc_PageRender/js/renderProduct"
+                    }
+                }
+            }
+        }
+    }
+
+</script>

@@ -1,0 +1,37 @@
+    <ol  class="products list items product-items" data-bind="foreach : listProduct">
+        <li class="item product product-item">
+            <div class="product-item-info" id="product-item-info_706" data-container="product-grid">
+                <a href="https://m244ce.m2.fgct.net/category-1/category-1-1/configurable-product-23.html"
+                   class="product photo product-item-photo" tabindex="-1">
+                    <span class="product-image-container product-image-container-706" style="width: 240px;">
+                        <span class="product-image-wrapper" style="padding-bottom: 125%;">
+                            <img class="product-image-photo"
+                                 data-bind="attr:{src: UrlImages}"
+                                 loading="lazy" width="240" height="300" alt="Configurable Product 23"/>
+                        </span>
+                    </span>
+                </a>
+                <div class="product details product-item-details">
+                    <strong class="product name product-item-name">
+                        <a class="product-item-link" data-bind="attr: { href: UrlProduct }, text: Name"></a>
+                    </strong>
+                    <div class="price-box price-final_price" data-role="priceBox" data-product-id="706"
+                         data-price-box="product-id-706"><span class="normal-price">
+                            <span class="price-container price-final_price tax weee">
+                                <span class="price-label">As low as</span>
+                                <span id="product-price-706" data-price-amount="1" data-price-type="finalPrice"
+                                      class="price-wrapper "><span class="price" data-bind="text : Price"></span></span>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ol>
+<div class="custom-pager">
+    <div class="previous-page" data-bind="visible: isShowPrevious"> <button data-bind="click : previousPage"> < </button> </div>
+    <div class="current-page">
+        <input data-bind="value: pageIndex" type="button"/>
+    </div>
+    <div class="next-page" data-bind="visible: isShowNext" > <button data-bind="click : nextPage"> > </button> </div>
+</div>
